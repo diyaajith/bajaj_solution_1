@@ -6,7 +6,7 @@ const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 
-app.post('/api', (req, res) => {
+app.post('/bfhl', (req, res) => {
   try {
     const inputData = req.body.data;
     const response = processInputData(inputData);
@@ -16,7 +16,7 @@ app.post('/api', (req, res) => {
   }
 });
 
-app.get('/api', (req, res) => {
+app.get('/bfhl', (req, res) => {
   const operationCode = 1;
   res.status(200).json({ operation_code: operationCode });
 });
